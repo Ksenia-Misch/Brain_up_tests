@@ -11,3 +11,6 @@ class BasePage:
     def open_page(self):
         self.driver.get(self.link)
 
+    def switch_to_new_window(self):
+        self.driver.switch_to.window(self.driver.window_handles[1])
+

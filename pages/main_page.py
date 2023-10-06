@@ -10,3 +10,10 @@ class MainPage(BasePage):
         self.driver.find_element(*BasePageLocators.DESCRIPTION_PAGE).click()
         assert self.driver.current_url == MainPageLinks.URL_DESCRIPTION_PAGE, \
             "The link leads to an incorrect page"
+
+    def open_telegram_page(self):
+        self.driver.find_element(*BasePageLocators.TELEGRAM_PAGE).click()
+        self.switch_to_new_window()
+        assert self.driver.current_url == MainPageLinks.URL_TELEGRAM_PAGE, \
+            "The link leads to an incorrect page"
+
