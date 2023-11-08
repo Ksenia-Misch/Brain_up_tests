@@ -1,4 +1,4 @@
-nname: UI_Tests
+name: UI_Tests
 
 on:
   pull_request:
