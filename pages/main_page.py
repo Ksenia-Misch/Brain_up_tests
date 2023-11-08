@@ -17,3 +17,8 @@ class MainPage(BasePage):
         assert self.driver.current_url == MainPageLinks.URL_TELEGRAM_PAGE, \
             "The link leads to an incorrect page"
 
+    def open_contributors_page(self):
+        self.driver.find_element(*BasePageLocators.MORE_MENU).click()
+        self.driver.find_element(*BasePageLocators.CONTRIBUTORS_PAGE).click()
+        assert self.driver.current_url == MainPageLinks.URL_CONTRIBUTORS_PAGE, \
+            "The link leads to an incorrect page"
