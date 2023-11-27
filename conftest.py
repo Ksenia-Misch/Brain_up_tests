@@ -7,14 +7,15 @@ from selenium.webdriver.chrome.options import Options
 URL = "https://brainup.site/"
 
 @pytest.fixture(scope="function", autouse=True)
-def driver(request):
+def driver():
+    print('\nstart browser...')
     options = Options()
-    options.add_argument("--headless")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--window-size=1382,754")
     driver = webdriver.Chrome(options=options)
-    request.cls.driver = driver
     yield driver
+    print('\nquit browser...')
     driver.quit()
 
 @pytest.fixture(scope="function")
