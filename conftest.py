@@ -9,7 +9,6 @@ URL = "https://brainup.site/"
 @pytest.fixture(scope="function", autouse=True)
 def driver(request):
     options = Options()
-    options.add_argument("--headless")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--window-size=1382,754")
