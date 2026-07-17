@@ -25,3 +25,8 @@
 - Добавление явных ожиданий (`Explicit Waits` / `WebDriverWait`) вместо неявных.
 - Интеграция генерации отчетов через Allure.
 - Параметризация тестов через `pytest.mark.parametrize`.
+- 
+## 🏆 Достижение
+Код из этого репозитория был принят в основной репозиторий проекта 
+[Brain-Up/auto-tests-python](https://github.com/Brain-up/auto-tests-python) 
+после успешного code review.
